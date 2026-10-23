@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>수강 신청 관리 | AI라이프 메이커 김부장</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@600&display=swap">
+<style>
+:root{--cream:#F8F4EC;--charcoal:#2E3A46;--muted:#5C6B78;--sand:#E5D3B8;--deep:#9E573F;--white:#FFFFFF}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--charcoal);font-family:Inter,'Noto Sans KR',system-ui,sans-serif;font-size:17px;line-height:1.6}
+a{color:var(--deep)}
+button,input,select{font:inherit;color:inherit;border-radius:0}
+:focus-visible{outline:2px solid var(--charcoal);outline-offset:2px}
+.serif{font-family:'Noto Serif KR',Batang,serif;font-weight:600;letter-spacing:-0.02em}
+.top{background:var(--charcoal);color:var(--cream)}
+.top .in{max-width:1280px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:44px;height:44px;display:block}
+.wrap{max-width:1280px;margin:0 auto;padding:32px 20px 64px}
+.card{background:var(--white);border:1px solid var(--sand);padding:28px}
+.btn{min-height:48px;padding:0 20px;border:0;background:var(--deep);color:var(--white);font-weight:600;cursor:pointer}
+.btn:disabled{opacity:.7;cursor:default}
+.btn-line{min-height:44px;padding:0 16px;border:1px solid var(--muted);background:var(--white);color:var(--charcoal);font-weight:500;cursor:pointer}
+.top .btn-line{background:transparent;color:var(--cream);border-color:var(--sand)}
+.fi{width:100%;min-height:48px;padding:10px 14px;border:1px solid var(--muted);background:var(--white)}
+label{font-weight:600;font-size:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:0 0 24px;padding:0;list-style:none}
+.stats li{background:var(--white);border:1px solid var(--sand);padding:16px 20px}
+.stats b{display:block;font-size:30px;line-height:1.3}
+.stats span{font-size:14px;color:var(--muted);font-weight:500}
+.tools{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-bottom:16px}
+.tools>div{display:flex;flex-direction:column;gap:4px}
+.tbl-box{overflow-x:auto;background:var(--white);border:1px solid var(--sand)}
+table{width:100%;border-collapse:collapse;min-width:980px;font-size:15px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--sand);vertical-align:top}
+th{background:var(--cream);font-weight:600;font-size:14px;color:var(--muted);white-space:nowrap}
+td.msg{max-width:320px;white-space:pre-wrap;word-break:break-word}
+td.nowrap{white-space:nowrap}
+.status{min-height:38px;padding:4px 8px;border:1px solid var(--muted);background:var(--white)}
+.note{color:var(--muted);font-size:15px}
+.err{color:var(--deep);font-weight:500;margin:0}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="in">
+<div class="brand">
+<img src="assets/logo.png" alt="AI 라이프 메이커 저널 로고">
+<div><div class="serif" style="font-size:18px">수강 신청 관리</div><div style="font-size:13px;color:var(--sand)">AI 에이전트 마스터클래스</div></div>
+</div>
+<div id="who" hidden style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+<span id="who-email" style="font-size:15px;color:var(--sand)"></span>
+<button id="logout" class="btn-line" type="button">로그아웃</button>
+</div>
+</div>
+</header>
+
+<main class="wrap">
+<section id="login-view" hidden style="max-width:440px;margin:40px auto">
+<div class="card">
+<h1 class="serif" style="margin:0 0 6px;font-size:26px">관리자 로그인</h1>
+<p class="note" style="margin:0 0 24px">관리자로 등록된 계정만 신청 내역을 볼 수 있습니다.</p>
+<form id="login-form" style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:6px"><label for="l-email">이메일</label><input id="l-email" class="fi" type="email" autocomplete="username" required></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="l-pw">비밀번호</label><input id="l-pw" class="fi" type="password" autocomplete="current-password" required></div>
+<p id="login-err" class="err" role="alert" hidden></p>
+<button id="login-btn" class="btn" type="submit">로그인</button>
+</form>
+</div>
+</section>
+
+<section id="list-view" hidden>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:20px">
+<div><h1 class="serif" style="margin:0;font-size:30px">수강 신청 내역</h1><p id="updated" class="note" style="margin:4px 0 0"></p></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button id="refresh" class="btn-line" type="button">새로고침</button>
+<button id="csv" class="btn" type="button">엑셀(CSV) 내려받기</button>
+</div>
+</div>
+
+<ul class="stats" aria-label="신청 현황">
+<li><b id="s-all">0</b><span>전체 신청</span></li>
+<li><b id="s-today">0</b><span>오늘 신청</span></li>
+<li><b id="s-new">0</b><span>연락 전(신규)</span></li>
+<li><b id="s-ok">0</b><span>등록 확정</span></li>
+</ul>
+
+<div class="tools">
+<div style="flex:1 1 260px"><label for="q">검색</label><input id="q" class="fi" type="search" placeholder="이름, 연락처, 이메일, 상담 내용"></div>
+<div style="flex:0 1 260px"><label for="f-interest">관심 분야</label><select id="f-interest" class="fi"><option value="">전체</option></select></div>
+<div style="flex:0 1 180px"><label for="f-status">상태</label><select id="f-status" class="fi"><option value="">전체</option><option>신규</option><option>연락 완료</option><option>등록 확정</option><option>취소</option></select></div>
+</div>
+
+<p id="list-err" class="err" role="alert" hidden style="margin-bottom:12px"></p>
+<div class="tbl-box">
+<table>
+<thead><tr><th>신청일시</th><th>이름</th><th>연락처</th><th>이메일</th><th>관심 분야</th><th>상담 내용</th><th>상태</th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+<p id="empty" class="empty" hidden>조건에 맞는 신청이 없습니다.</p>
+</div>
+</section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script>
+(function () {
+  var cfg = window.SUPABASE_CONFIG;
+  var db = window.supabase.createClient(cfg.url, cfg.key);
+  var STATUSES = ['신규', '연락 완료', '등록 확정', '취소'];
+  var all = [];
+  var $ = function (id) { return document.getElementById(id); };
+
+  function fmt(ts) {
+    var d = new Date(ts);
+    var p = function (n) { return String(n).padStart(2, '0'); };
+    return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
+  }
+  function showErr(id, msg) { var el = $(id); el.textContent = msg; el.hidden = !msg; }
+
+  async function route() {
+    var s = (await db.auth.getSession()).data.session;
+    if (!s) { $('login-view').hidden = false; $('list-view').hidden = true; $('who').hidden = true; return; }
+    var adm = await db.from('admins').select('user_id').eq('user_id', s.user.id).maybeSingle();
+    $('who').hidden = false;
+    $('who-email').textContent = s.user.email;
+    if (adm.error || !adm.data) {
+      $('login-view').hidden = false; $('list-view').hidden = true;
+      showErr('login-err', '이 계정은 관리자로 등록되어 있지 않습니다. 관리자 지정 후 다시 로그인해 주세요.');
+      return;
+    }
+    $('login-view').hidden = true; $('list-view').hidden = false;
+    load();
+  }
+
+  async function load() {
+    showErr('list-err', '');
+    var res = await db.from('registrations').select('*').order('created_at', { ascending: false });
+    if (res.error) { showErr('list-err', '신청 내역을 불러오지 못했습니다: ' + res.error.message); return; }
+    all = res.data || [];
+    var interests = Array.from(new Set(all.map(function (r) { return r.interest; }).filter(Boolean)));
+    var sel = $('f-interest'), cur = sel.value;
+    sel.length = 1;
+    interests.forEach(function (i) { sel.add(new Option(i, i)); });
+    sel.value = interests.indexOf(cur) >= 0 ? cur : '';
+    $('updated').textContent = '마지막 불러온 시각 ' + fmt(new Date());
+    render();
+  }
+
+  function filtered() {
+    var q = $('q').value.trim().toLowerCase(), fi = $('f-interest').value, fs = $('f-status').value;
+    return all.filter(function (r) {
+      if (fi && r.interest !== fi) return false;
+      if (fs && r.status !== fs) return false;
+      if (!q) return true;
+      return [r.name, r.phone, r.email, r.message].join(' ').toLowerCase().indexOf(q) >= 0;
+    });
+  }
+
+  function render() {
+    var today = new Date().toDateString();
+    $('s-all').textContent = all.length;
+    $('s-today').textContent = all.filter(function (r) { return new Date(r.created_at).toDateString() === today; }).length;
+    $('s-new').textContent = all.filter(function (r) { return r.status === '신규'; }).length;
+    $('s-ok').textContent = all.filter(function (r) { return r.status === '등록 확정'; }).length;
+
+    var list = filtered(), tb = $('rows');
+    tb.textContent = '';
+    $('empty').hidden = list.length > 0;
+    list.forEach(function (r) {
+      var tr = document.createElement('tr');
+      [[fmt(r.created_at), 'nowrap'], [r.name, 'nowrap'], [r.phone, 'nowrap'], [r.email || '-', ''], [r.interest || '-', ''], [r.message || '-', 'msg']].forEach(function (c) {
+        var td = document.createElement('td');
+        td.textContent = c[0];
+        if (c[1]) td.className = c[1];
+        tr.appendChild(td);
+      });
+      var td = document.createElement('td');
+      var s = document.createElement('select');
+      s.className = 'status';
+      s.setAttribute('aria-label', r.name + ' 신청 상태');
+      STATUSES.forEach(function (st) { s.add(new Option(st, st)); });
+      s.value = r.status;
+      s.addEventListener('change', async function () {
+        var prev = r.status, next = s.value;
+        s.disabled = true;
+        var up = await db.from('registrations').update({ status: next }).eq('id', r.id);
+        s.disabled = false;
+        if (up.error) { s.value = prev; alert('상태를 바꾸지 못했습니다: ' + up.error.message); return; }
+        r.status = next;
+        render();
+      });
+      td.appendChild(s);
+      tr.appendChild(td);
+      tb.appendChild(tr);
+    });
+  }
+
+  function downloadCsv() {
+    var head = ['신청일시', '이름', '연락처', '이메일', '관심 분야', '상담 내용', '상태'];
+    var q = function (v) {
+      var s = String(v == null ? '' : v);
+      if (/^[=+\-@]/.test(s)) s = "'" + s;
+      return '"' + s.replace(/"/g, '""') + '"';
+    };
+    var lines = [head.map(q).join(',')].concat(filtered().map(function (r) {
+      return [fmt(r.created_at), r.name, r.phone, r.email, r.interest, r.message, r.status].map(q).join(',');
+    }));
+    var blob = new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = '수강신청_' + fmt(new Date()).slice(0, 10) + '.csv';
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(a.href);
+  }
+
+  $('login-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    showErr('login-err', '');
+    $('login-btn').disabled = true; $('login-btn').textContent = '확인 중...';
+    var res = await db.auth.signInWithPassword({ email: $('l-email').value.trim(), password: $('l-pw').value });
+    $('login-btn').disabled = false; $('login-btn').textContent = '로그인';
+    if (res.error) { showErr('login-err', '이메일 또는 비밀번호를 확인해 주세요.'); return; }
+    $('l-pw').value = '';
+    route();
+  });
+  $('logout').addEventListener('click', async function () { await db.auth.signOut(); all = []; $('rows').textContent = ''; route(); });
+  $('refresh').addEventListener('click', load);
+  $('csv').addEventListener('click', downloadCsv);
+  ['q', 'f-interest', 'f-status'].forEach(function (id) { $(id).addEventListener('input', render); });
+
+  route();
+})();
+</script>
+</body>
+</html>
