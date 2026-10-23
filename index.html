@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 에이전트 마스터클래스 수강 신청 | AI라이프 메이커 김부장</title>
+<meta name="description" content="30년 실무 기획자 김부장과 함께 5주 만에 내 업무를 대신하는 AI 에이전트를 직접 만듭니다.">
+<meta property="og:title" content="AI 에이전트 마스터클래스 | AI라이프 메이커 김부장">
+<meta property="og:description" content="내 일을 대신 해줄 AI, 5주 만에 직접 만드세요.">
+<meta property="og:image" content="assets/portrait.webp">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@400;600&display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F8F4EC}
+a{color:#9E573F}a:hover{color:#2E3A46}
+.lp{container-type:inline-size}
+.lp *{box-sizing:border-box}
+.lp a:focus-visible,.lp button:focus-visible,.lp input:focus-visible,.lp select:focus-visible,.lp textarea:focus-visible,.lp video:focus-visible{outline:2px solid #2E3A46;outline-offset:2px}
+.lp .dk a:focus-visible,.lp .dk button:focus-visible{outline-color:#F8F4EC}
+.lp .h1{font-size:clamp(32px,4.2cqw,56px)}
+.lp .h2{font-size:clamp(28px,2.9cqw,40px)}
+.lp .fi{width:100%;min-height:56px;padding:14px 16px;border:1px solid #5C6B78;border-radius:0;background:#FFFFFF;color:#2E3A46;font:inherit;font-size:18px}
+.lp .fi::placeholder{color:#5C6B78}
+.lp .err{margin:0;font-size:16px;color:#9E573F;font-weight:500}
+.lp .navl{display:flex}
+.lp .mbar{display:none}
+.lp .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+[hidden]{display:none !important}
+@container (max-width:760px){.lp .navl{display:none}.lp .mbar{display:flex}}
+</style>
+</head>
+<body>
+<div class="lp" style="width: 100%; min-width: 320px; background: #F8F4EC; color: #2E3A46; font-family: Inter, 'Noto Sans KR', Pretendard, system-ui, sans-serif; font-size: 18px; line-height: 1.7">
+
+<header class="dk" style="background: #2E3A46; border-bottom: 1px solid #5C6B78">
+<div style="max-width: 1200px; margin: 0 auto; padding: 16px clamp(20px, 5cqw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="#top" style="display: flex; align-items: center; gap: 14px; text-decoration: none; color: #F8F4EC">
+<img src="assets/logo.png" alt="AI 라이프 메이커 저널 로고" width="52" height="52" style="width: 52px; height: 52px; display: block">
+<span style="display: flex; flex-direction: column; line-height: 1.3">
+<span style="font-family: 'Noto Serif KR', Batang, serif; font-weight: 600; font-size: 19px; letter-spacing: -0.02em">AI라이프 메이커 김부장</span>
+<span style="font-size: 13px; letter-spacing: 0.12em; color: #E5D3B8">AI 에이전트 마스터클래스</span>
+</span>
+</a>
+<nav aria-label="주요 메뉴" class="navl" style="align-items: center; gap: 32px; font-size: 16px; font-weight: 500">
+<a href="#why" style="color: #F8F4EC; text-decoration: none">왜 Claude인가</a>
+<a href="#curriculum" style="color: #F8F4EC; text-decoration: none">5주 커리큘럼</a>
+<a href="#teacher" style="color: #F8F4EC; text-decoration: none">강사 소개</a>
+<a href="#apply" style="color: #F8F4EC; text-decoration: none; border: 1px solid #E5D3B8; padding: 10px 20px">수강 신청</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section id="top" class="dk" aria-labelledby="hero-title" style="background: #2E3A46; color: #F8F4EC">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 7cqw, 104px) clamp(20px, 5cqw, 48px) clamp(56px, 6cqw, 88px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(40px, 5cqw, 72px)">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0; align-self: flex-start; border: 1px solid #E5D3B8; padding: 8px 16px; font-size: 15px; font-weight: 500; color: #E5D3B8; line-height: 1.5">30년 실무 기획자가 직접 가르치는 실습형 AI 에이전트 과정</p>
+<h1 id="hero-title" class="h1" style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-weight: 600; line-height: 1.25; letter-spacing: -0.03em">내 일을 대신 해줄 AI,<br><span style="color: #C0735A">5주 만에</span> 직접 만드세요</h1>
+<p style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-size: clamp(20px, 1.8cqw, 24px); line-height: 1.5; letter-spacing: -0.02em">AI를 배우고, 일을 바꾸고, 인생을 디자인하다.</p>
+<p style="margin: 0; font-size: 18px; color: #E5D3B8; max-width: 560px">보고서, 이메일, 자료조사, 홍보까지. 30년 실무 기획자 김부장과 내 업무에 맞는 AI 에이전트를 함께 만듭니다.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 4px">
+<a href="#apply" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; padding: 0 36px; background: #9E573F; color: #FFFFFF; text-decoration: none; font-size: 20px; font-weight: 600">수강 신청하기
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#curriculum" style="color: #F8F4EC; font-size: 18px; font-weight: 500; text-underline-offset: 6px">커리큘럼 먼저 보기</a>
+</div>
+<p style="margin: 0; font-size: 16px; color: #E5D3B8">컴퓨터가 서툴러도 괜찮습니다. 따라 하기만 하면 됩니다.</p>
+</div>
+<figure style="flex: 1 1 340px; max-width: 460px; margin: 0 auto; display: flex; flex-direction: column; gap: 0">
+<img src="assets/portrait.webp" alt="안경을 고쳐 쓰는 김교동 부장 일러스트" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: #FFFFFF; border: 1px solid #E5D3B8">
+<figcaption style="background: #F8F4EC; color: #2E3A46; padding: 14px 20px; font-size: 15px; font-weight: 500; line-height: 1.5; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap"><span style="font-family: 'Noto Serif KR', Batang, serif; font-weight: 600; font-size: 17px">김교동 부장</span><span style="color: #5C6B78">실무형 AI 에이전트 강사</span></figcaption>
+</figure>
+</div>
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 5cqw, 48px) clamp(48px, 5cqw, 72px)">
+<ul aria-label="과정 신뢰 지표" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border-top: 1px solid #5C6B78">
+<li style="padding: 24px 24px 0 0; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Noto Serif KR', Batang, serif; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3">30년</span>
+<span style="font-size: 16px; color: #E5D3B8">기획 실무 경력 [확인 필요: 29년차 표기 통일]</span>
+</li>
+<li style="padding: 24px 24px 0 0; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Noto Serif KR', Batang, serif; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3">5주</span>
+<span style="font-size: 16px; color: #E5D3B8">매주 결과물이 남는 실습형 과정</span>
+</li>
+<li style="padding: 24px 24px 0 0; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Noto Serif KR', Batang, serif; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3">[수강 인원]</span>
+<span style="font-size: 16px; color: #E5D3B8">누적 수강생·만족도 [확인 필요: 실제 수치만]</span>
+</li>
+</ul>
+</div>
+</section>
+
+<section id="why" aria-labelledby="why-title" style="background: #F8F4EC">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 8cqw, 112px) clamp(20px, 5cqw, 48px); display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.16em; color: #9E573F">왜 Claude인가</p>
+<h2 id="why-title" class="h2" style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-weight: 600; line-height: 1.3; letter-spacing: -0.025em">왜 우리는 많은 AI 중에서<br>Claude를 써야 할까요?</h2>
+<p style="margin: 0">AI 도구는 넘쳐나는데, 정작 내 업무에는 어떻게 써야 할지 막막하셨지요? 배우다 말고 다시 예전 방식으로 돌아간 경험이 있으시다면, 도구가 아니라 “내 업무에 맞춘 활용법”이 없었기 때문입니다.</p>
+<ul aria-label="이런 적 있으셨나요" style="list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 16px; align-items: flex-start; background: #FFFFFF; border: 1px solid #E5D3B8; padding: 18px 20px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9E573F" stroke-width="2" stroke-linecap="square" style="flex: none; margin-top: 2px"><rect x="3" y="3" width="18" height="18"></rect><path d="M7.5 12.5l3 3 6-7"></path></svg>
+<span>보고서·이메일에 매일 몇 시간씩 쓰고 있다</span>
+</li>
+<li style="display: flex; gap: 16px; align-items: flex-start; background: #FFFFFF; border: 1px solid #E5D3B8; padding: 18px 20px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9E573F" stroke-width="2" stroke-linecap="square" style="flex: none; margin-top: 2px"><rect x="3" y="3" width="18" height="18"></rect><path d="M7.5 12.5l3 3 6-7"></path></svg>
+<span>AI를 써 봤지만 결과가 어설퍼 결국 다시 쓴다</span>
+</li>
+<li style="display: flex; gap: 16px; align-items: flex-start; background: #FFFFFF; border: 1px solid #E5D3B8; padding: 18px 20px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9E573F" stroke-width="2" stroke-linecap="square" style="flex: none; margin-top: 2px"><rect x="3" y="3" width="18" height="18"></rect><path d="M7.5 12.5l3 3 6-7"></path></svg>
+<span>후배들은 AI로 빠르게 끝내는데 나만 뒤처지는 느낌이다</span>
+</li>
+</ul>
+</div>
+<figure style="flex: 1 1 380px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 12px">
+<img src="assets/field.jpg" alt="강사의 안내를 받으며 태블릿으로 실습하는 중장년 수강생들" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border: 1px solid #E5D3B8">
+<figcaption style="font-size: 14px; font-weight: 500; color: #5C6B78; line-height: 1.6">천천히, 함께, 한 단계씩. 실습으로 익히는 교육 현장</figcaption>
+</figure>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+<article style="background: #FFFFFF; border: 1px solid #E5D3B8; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2E3A46" stroke-width="1.5" stroke-linejoin="round"><path d="M6 2.5h8l4.5 4.5v14.5H6z"></path><path d="M14 2.5V7h4.5M9 12h6M9 15.5h6M9 19h4"></path></svg>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; line-height: 1.45">긴 문서도 막힘없이 읽고 정리합니다</h3>
+<p style="margin: 0">두꺼운 보고서와 자료를 통째로 올려 요약·분석을 맡길 수 있습니다. 기획서·회의록·계약서 검토 같은 실무에 잘 맞습니다.</p>
+</article>
+<article style="background: #FFFFFF; border: 1px solid #E5D3B8; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2E3A46" stroke-width="1.5" stroke-linejoin="round"><path d="M15.5 4.5l4 4L9 19l-5 1 1-5z"></path><path d="M13.5 6.5l4 4M4 22h16"></path></svg>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; line-height: 1.45">사람처럼 자연스러운 한국어 글쓰기</h3>
+<p style="margin: 0">보고서, 이메일, 홍보 문구를 어색함 없이 다듬어 줍니다. 그대로 써도 될 만큼 문장을 정리하는 것이 강점입니다.</p>
+</article>
+<article style="background: #FFFFFF; border: 1px solid #E5D3B8; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2E3A46" stroke-width="1.5" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"></circle><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"></path></svg>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; line-height: 1.45">반복 업무를 맡기는 AI 에이전트</h3>
+<p style="margin: 0">지시 한 번으로 자료 정리, 문서 작성, 파일 만들기까지 여러 단계를 이어서 처리합니다. 내 업무 전용 에이전트를 만드는 데 적합합니다.</p>
+</article>
+<article style="background: #FFFFFF; border: 1px solid #E5D3B8; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2E3A46" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></svg>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; line-height: 1.45">중요한 일을 맡길 수 있는 신중함</h3>
+<p style="margin: 0">모르는 것은 모른다고 말하고 근거를 함께 보여 주는 방향으로 설계되어, 업무용으로 믿고 쓰기 좋습니다.</p>
+</article>
+</div>
+<p style="margin: 0; text-align: center; font-size: 18px">내 업무에 맞춰 직접 써 보고 싶으시다면 <a href="#apply" style="font-weight: 600; text-underline-offset: 5px">수강 신청하기</a></p>
+</div>
+</section>
+
+<section id="curriculum" aria-labelledby="cur-title" style="background: #FFFFFF; border-top: 1px solid #E5D3B8; border-bottom: 1px solid #E5D3B8">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 8cqw, 112px) clamp(20px, 5cqw, 48px); display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.16em; color: #9E573F">5주 커리큘럼</p>
+<h2 id="cur-title" class="h2" style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-weight: 600; line-height: 1.3; letter-spacing: -0.025em">5주 뒤, 내 업무를 대신하는 AI가<br>내 손에 있습니다.</h2>
+<p style="margin: 0; color: #5C6B78">매주 하나씩 직접 만들고, 바로 업무에 씁니다.</p>
+</div>
+
+<ol aria-label="주차별 커리큘럼" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px">
+<li style="border: 1px solid #E5D3B8; border-top: 4px solid #2E3A46; background: #F8F4EC; padding: 24px 20px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; background: #2E3A46; color: #F8F4EC; font-size: 14px; font-weight: 600; padding: 4px 12px; line-height: 1.6">1주차</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 600; line-height: 1.45">Claude 시작하기: 내 업무 파트너 세팅</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #5C6B78; flex-grow: 1">계정·화면 익히기, 업무 지시 잘하는 프롬프트 5요소(역할·목적·대상·조건·예시) 실습</p>
+<div style="border: 2px solid #9E573F; background: #FFFFFF; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; font-weight: 600; color: #9E573F; letter-spacing: 0.04em">내가 가져가는 것</span>
+<span style="font-size: 16px; font-weight: 600; line-height: 1.5">내 업무용 프롬프트 템플릿 5종</span>
+</div>
+</li>
+<li style="border: 1px solid #E5D3B8; border-top: 4px solid #2E3A46; background: #F8F4EC; padding: 24px 20px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; background: #2E3A46; color: #F8F4EC; font-size: 14px; font-weight: 600; padding: 4px 12px; line-height: 1.6">2주차</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 600; line-height: 1.45">보고서·이메일 자동 작성</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #5C6B78; flex-grow: 1">보고서 초안, 이메일 답장, 회의록 정리를 AI로 처리하는 실습</p>
+<div style="border: 2px solid #9E573F; background: #FFFFFF; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; font-weight: 600; color: #9E573F; letter-spacing: 0.04em">내가 가져가는 것</span>
+<span style="font-size: 16px; font-weight: 600; line-height: 1.5">내 직무 맞춤 문서 작성 세트</span>
+</div>
+</li>
+<li style="border: 1px solid #E5D3B8; border-top: 4px solid #2E3A46; background: #F8F4EC; padding: 24px 20px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; background: #2E3A46; color: #F8F4EC; font-size: 14px; font-weight: 600; padding: 4px 12px; line-height: 1.6">3주차</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 600; line-height: 1.45">자료조사·분석 에이전트</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #5C6B78; flex-grow: 1">긴 자료 요약, 시장·경쟁사 조사, 핵심 인사이트 정리</p>
+<div style="border: 2px solid #9E573F; background: #FFFFFF; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; font-weight: 600; color: #9E573F; letter-spacing: 0.04em">내가 가져가는 것</span>
+<span style="font-size: 16px; font-weight: 600; line-height: 1.5">한 장짜리 조사 보고서</span>
+</div>
+</li>
+<li style="border: 1px solid #E5D3B8; border-top: 4px solid #2E3A46; background: #F8F4EC; padding: 24px 20px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; background: #2E3A46; color: #F8F4EC; font-size: 14px; font-weight: 600; padding: 4px 12px; line-height: 1.6">4주차</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 600; line-height: 1.45">나만의 AI 에이전트 만들기</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #5C6B78; flex-grow: 1">반복 업무를 단계로 나눠 에이전트에게 맡기는 구조 설계와 제작</p>
+<div style="border: 2px solid #9E573F; background: #FFFFFF; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; font-weight: 600; color: #9E573F; letter-spacing: 0.04em">내가 가져가는 것</span>
+<span style="font-size: 16px; font-weight: 600; line-height: 1.5">내 업무 전용 AI 에이전트 1개</span>
+</div>
+</li>
+<li style="border: 1px solid #E5D3B8; border-top: 4px solid #2E3A46; background: #F8F4EC; padding: 24px 20px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; background: #2E3A46; color: #F8F4EC; font-size: 14px; font-weight: 600; padding: 4px 12px; line-height: 1.6">5주차</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 600; line-height: 1.45">콘텐츠·홍보 자동화와 나만의 활용 플랜</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #5C6B78; flex-grow: 1">홍보 문구, SNS 게시물, 고객 안내문 제작 + 수료 후 활용 로드맵</p>
+<div style="border: 2px solid #9E573F; background: #FFFFFF; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; font-weight: 600; color: #9E573F; letter-spacing: 0.04em">내가 가져가는 것</span>
+<span style="font-size: 16px; font-weight: 600; line-height: 1.5">콘텐츠 제작 세트 + 90일 활용 플랜</span>
+</div>
+</li>
+</ol>
+<p style="margin: -24px 0 0; font-size: 16px; color: #5C6B78">매주 실습 후 바로 써먹는 “오늘의 미션”이 제공됩니다.</p>
+
+<div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: stretch">
+<dl style="flex: 1 1 560px; min-width: 0; margin: 0; border: 1px solid #E5D3B8; background: #F8F4EC; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))">
+<div style="padding: 20px 24px; border-bottom: 1px solid #E5D3B8"><dt style="font-size: 14px; font-weight: 500; color: #5C6B78">교육 방식</dt><dd style="margin: 2px 0 0; font-weight: 600">온라인 실시간 강의 [확인 필요]</dd></div>
+<div style="padding: 20px 24px; border-bottom: 1px solid #E5D3B8"><dt style="font-size: 14px; font-weight: 500; color: #5C6B78">기간</dt><dd style="margin: 2px 0 0; font-weight: 600">5주 · [개강일 / 요일·시간 확인 필요]</dd></div>
+<div style="padding: 20px 24px; border-bottom: 1px solid #E5D3B8"><dt style="font-size: 14px; font-weight: 500; color: #5C6B78">수강료</dt><dd style="margin: 2px 0 0; font-weight: 600">[금액 · 조기 신청 혜택 확인 필요]</dd></div>
+<div style="padding: 20px 24px; border-bottom: 1px solid #E5D3B8"><dt style="font-size: 14px; font-weight: 500; color: #5C6B78">정원</dt><dd style="margin: 2px 0 0; font-weight: 600">[인원 확인 필요]</dd></div>
+<div style="padding: 20px 24px"><dt style="font-size: 14px; font-weight: 500; color: #5C6B78">제공</dt><dd style="margin: 2px 0 0; font-weight: 600">실습 자료, 프롬프트 템플릿, 질의응답 [사후 지원 범위 확인 필요]</dd></div>
+</dl>
+<div style="flex: 1 1 300px; background: #2E3A46; color: #F8F4EC; padding: 32px; display: flex; flex-direction: column; justify-content: center; gap: 20px">
+<p style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-size: 24px; font-weight: 600; line-height: 1.45; letter-spacing: -0.02em">매주 하나씩,<br>내 업무에 바로 씁니다.</p>
+<a href="#apply" style="display: flex; align-items: center; justify-content: center; min-height: 60px; padding: 0 24px; background: #9E573F; color: #FFFFFF; text-decoration: none; font-size: 18px; font-weight: 600; text-align: center; line-height: 1.4">내 업무에 맞는 5주 과정 신청하기</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="teacher" aria-labelledby="teacher-title" style="background: #F8F4EC">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 8cqw, 112px) clamp(20px, 5cqw, 48px); display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.16em; color: #9E573F">강사 소개</p>
+<h2 id="teacher-title" class="h2" style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-weight: 600; line-height: 1.3; letter-spacing: -0.025em">이론가가 아닌,<br>30년 현장 기획자에게 배웁니다.</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<img src="assets/lecture.jpg" alt="AI 기술 강의를 진행하는 김교동 부장과 수강생들" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; border: 1px solid #E5D3B8">
+<figcaption style="font-size: 14px; font-weight: 500; color: #5C6B78; line-height: 1.6">실무 사례로 풀어 가는 AI 활용 강의</figcaption>
+</figure>
+<blockquote style="margin: 0; background: #FFFFFF; border: 1px solid #E5D3B8; padding: 28px 32px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-size: clamp(22px, 2cqw, 26px); line-height: 1.5; letter-spacing: -0.02em">“AI는 어려운 기술이 아니라, 내 일을 덜어 주는 동료입니다.”</p>
+<footer style="font-size: 15px; font-weight: 500; color: #5C6B78">김교동 부장</footer>
+</blockquote>
+</div>
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 15px; font-weight: 500; color: #9E573F; letter-spacing: 0.04em">AI라이프 메이커</p>
+<h3 style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-size: 34px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.3">김교동 부장</h3>
+<p style="margin: 0; color: #5C6B78">30년 실무 기획 전문가, 실무형 AI 에이전트 강사</p>
+</div>
+<p style="margin: 0">기획·마케팅·신규사업·IR 업무를 30년 가까이 해 온 현직 실무자입니다. 보고서와 회의에 쫓기던 제가 AI로 일하는 방식을 바꿨고, 그 방법을 중장년 직장인과 사장님들이 오늘 바로 따라 할 수 있게 가르칩니다.</p>
+<div style="border-top: 1px solid #E5D3B8; padding-top: 24px; display: flex; flex-direction: column; gap: 8px">
+<h4 style="margin: 0; font-size: 17px; font-weight: 600">강의 철학</h4>
+<p style="margin: 0">“내 업무에서 무엇을 AI에게 맡길 것인가”에서 출발합니다. AI 소비자가 아니라 AI 메이커로 성장하도록 돕습니다.</p>
+</div>
+<div style="border-top: 1px solid #E5D3B8; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<h4 style="margin: 0; font-size: 17px; font-weight: 600">약력</h4>
+<ul style="margin: 0; padding: 0 0 0 20px; display: flex; flex-direction: column; gap: 6px">
+<li>현) 중견 제조기업 기획 실무 · 기획·마케팅·신규사업 발굴·IR 담당</li>
+<li>현) AI라이프 메이커 대표 강사 · 중장년 직장인·소상공인 대상 실습형 AI 교육</li>
+<li>기획 실무 경력 30년 [확인 필요: 29년차 표기 통일]</li>
+<li>[자격 · 학력 · 저서 확인 필요]</li>
+</ul>
+</div>
+<div style="border-top: 1px solid #E5D3B8; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<h4 style="margin: 0; font-size: 17px; font-weight: 600">출강 이력</h4>
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px">
+<li style="border: 1px dashed #5C6B78; padding: 12px 16px; font-size: 16px; color: #5C6B78">[기관명 / 강의 주제 / 연도]</li>
+<li style="border: 1px dashed #5C6B78; padding: 12px 16px; font-size: 16px; color: #5C6B78">[기관명 / 강의 주제 / 연도]</li>
+<li style="border: 1px dashed #5C6B78; padding: 12px 16px; font-size: 16px; color: #5C6B78">[기관명 / 강의 주제 / 연도]</li>
+<li style="border: 1px dashed #5C6B78; padding: 12px 16px; font-size: 16px; color: #5C6B78">[누적 수강생 · 만족도]</li>
+</ul>
+</div>
+<a href="#apply" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border: 2px solid #2E3A46; color: #2E3A46; text-decoration: none; font-size: 18px; font-weight: 600">김부장과 함께 시작하기</a>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center; background: #2E3A46; color: #F8F4EC; padding: clamp(24px, 3cqw, 40px)">
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.16em; color: #E5D3B8">미리보기</p>
+<h3 style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-size: 28px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.35">강의 미리보기</h3>
+<p style="margin: 0; color: #E5D3B8">김부장의 수업 분위기를 먼저 만나 보세요.</p>
+</div>
+<video controls playsinline preload="metadata" poster="assets/lecture.jpg" src="assets/intro.mp4" aria-label="강의 미리보기 영상" style="flex: 2 1 480px; min-width: 0; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #000000; display: block"></video>
+</div>
+</div>
+</section>
+
+<section id="apply" aria-labelledby="apply-title" style="background: #FFFFFF; border-top: 1px solid #E5D3B8">
+<div style="max-width: 720px; margin: 0 auto; padding: clamp(72px, 8cqw, 112px) clamp(20px, 5cqw, 40px); display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px; text-align: center; align-items: center">
+<p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.16em; color: #9E573F">수강 신청</p>
+<h2 id="apply-title" class="h2" style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-weight: 600; line-height: 1.3; letter-spacing: -0.025em">지금, 내 업무를 바꿀<br>첫걸음을 시작하세요.</h2>
+<p style="margin: 0; color: #5C6B78">아래 정보를 남겨 주시면 개강 안내와 수강 절차를 가장 먼저 보내 드립니다.</p>
+</div>
+
+<form id="apply-form" novalidate style="background: #F8F4EC; border: 1px solid #E5D3B8; padding: clamp(24px, 4cqw, 48px); display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-name" style="font-size: 17px; font-weight: 600">이름 <span style="color: #9E573F">(필수)</span></label>
+<input id="f-name" name="name" type="text" autocomplete="name" placeholder="홍길동" class="fi" aria-describedby="e-name">
+<p id="e-name" class="err" role="alert" hidden>필수 항목을 입력해 주세요.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-phone" style="font-size: 17px; font-weight: 600">연락처 <span style="color: #9E573F">(필수)</span></label>
+<input id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="010-0000-0000" class="fi" aria-describedby="e-phone">
+<p id="e-phone" class="err" role="alert" hidden></p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-email" style="font-size: 17px; font-weight: 600">이메일 <span style="color: #9E573F">(필수)</span></label>
+<input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="example@email.com" class="fi" aria-describedby="e-email">
+<p id="e-email" class="err" role="alert" hidden></p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-topic" style="font-size: 17px; font-weight: 600">가장 관심 있는 분야 <span style="color: #9E573F">(필수)</span></label>
+<select id="f-topic" name="topic" class="fi" aria-describedby="e-topic">
+<option value="" selected disabled>선택해 주세요</option>
+<option>보고서·기획서·이메일 작성 자동화</option>
+<option>자료조사·시장분석</option>
+<option>마케팅·SNS·홍보 콘텐츠 제작</option>
+<option>고객 응대·소상공인 매장 운영</option>
+<option>반복 업무 자동화(AI 에이전트 제작)</option>
+<option>강사·콘텐츠 제작 등 새로운 수익 만들기</option>
+<option>기타</option>
+</select>
+<p id="e-topic" class="err" role="alert" hidden>필수 항목을 입력해 주세요.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="f-msg" style="font-size: 17px; font-weight: 600">남기실 말씀 <span style="font-weight: 400; color: #5C6B78">(선택)</span></label>
+<textarea id="f-msg" name="message" rows="4" placeholder="현재 하시는 일이나 배우고 싶은 점을 편하게 적어 주세요." class="fi" style="resize: vertical; line-height: 1.6"></textarea>
+</div>
+<div class="hp" aria-hidden="true"><label for="f-web">웹사이트</label><input id="f-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #E5D3B8; padding-top: 20px">
+<label for="f-agree" style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.6; cursor: pointer">
+<input id="f-agree" name="agree" type="checkbox" style="width: 24px; height: 24px; margin: 1px 0 0; flex: none; accent-color: #9E573F">
+<span><strong style="font-weight: 600">(필수) 개인정보 수집·이용에 동의합니다.</strong><br><span style="color: #5C6B78">수집 항목: 이름, 연락처, 이메일 / 목적: 수강 안내 / 보유기간: [확인 필요]</span></span>
+</label>
+<a href="#privacy" style="align-self: flex-start; margin-left: 36px; font-size: 15px">자세히 보기</a>
+<p id="e-agree" class="err" role="alert" hidden>개인정보 수집·이용에 동의해 주세요.</p>
+</div>
+<button id="f-submit" type="submit" style="width: 100%; min-height: 64px; border: 0; border-radius: 0; background: #9E573F; color: #FFFFFF; font: inherit; font-size: 20px; font-weight: 600; cursor: pointer">수강 신청 완료하기</button>
+<p style="margin: 0; text-align: center; font-size: 15px; color: #5C6B78">신청 후 1영업일 이내에 문자 또는 이메일로 안내드립니다. [확인 필요]<br>입력하신 정보는 수강 안내 외에는 사용하지 않습니다.</p>
+</form>
+
+<div id="apply-done" role="status" tabindex="-1" hidden style="background: #F8F4EC; border: 1px solid #E5D3B8; padding: clamp(32px, 5cqw, 56px); display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
+<svg aria-hidden="true" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#9E573F" stroke-width="1.5" stroke-linecap="square"><rect x="2.5" y="2.5" width="19" height="19"></rect><path d="M7 12.5l3.5 3.5L17 8.5"></path></svg>
+<h3 style="margin: 0; font-family: 'Noto Serif KR', Batang, serif; font-size: 30px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.35">신청해 주셔서 감사합니다.</h3>
+<p style="margin: 0; max-width: 480px">입력하신 연락처로 곧 수강 안내를 보내 드리겠습니다. 기다리시는 동안 오픈채팅방에서 먼저 인사 나눠요.</p>
+<a href="#kakao" style="display: inline-flex; align-items: center; justify-content: center; min-height: 60px; padding: 0 32px; background: #9E573F; color: #FFFFFF; text-decoration: none; font-size: 18px; font-weight: 600">카카오톡 오픈채팅방 입장하기</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer id="kakao" class="dk" style="background: #2E3A46; color: #F8F4EC; font-size: 16px">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 6cqw, 80px) clamp(20px, 5cqw, 48px) 40px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 14px">
+<img src="assets/logo.png" alt="AI 라이프 메이커 저널 로고" width="64" height="64" loading="lazy" style="width: 64px; height: 64px; display: block">
+<span style="font-family: 'Noto Serif KR', Batang, serif; font-size: 20px; font-weight: 600; letter-spacing: -0.02em">AI라이프 메이커 김부장</span>
+</div>
+<p style="margin: 0; color: #E5D3B8">AI를 배우고, 일을 바꾸고, 인생을 디자인하다.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 19px; font-weight: 600; line-height: 1.5">궁금한 점, 카카오톡으로 편하게 물어보세요</h2>
+<p style="margin: 0; color: #E5D3B8">수강 전 상담과 AI 활용 팁을 오픈채팅방에서 나눕니다.</p>
+<a href="#kakao" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border: 1px solid #E5D3B8; color: #F8F4EC; text-decoration: none; font-weight: 600">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><path d="M12 4C6.8 4 3 7.2 3 11c0 2.4 1.5 4.4 3.8 5.6L6 20l3.8-2.3c.7.1 1.4.2 2.2.2 5.2 0 9-3.2 9-7s-3.8-6.9-9-6.9z"></path></svg>
+카카오톡 오픈채팅방 입장하기</a>
+<p style="margin: 0; font-size: 15px; color: #E5D3B8">[확인 필요: 오픈채팅 링크]</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 19px; font-weight: 600; line-height: 1.5">고객센터</h2>
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 4px; color: #E5D3B8">
+<div style="display: flex; gap: 10px"><dt style="color: #F8F4EC; font-weight: 500">이메일</dt><dd style="margin: 0">[확인 필요]</dd></div>
+<div style="display: flex; gap: 10px"><dt style="color: #F8F4EC; font-weight: 500">전화</dt><dd style="margin: 0">[확인 필요]</dd></div>
+<div style="display: flex; gap: 10px"><dt style="color: #F8F4EC; font-weight: 500">운영시간</dt><dd style="margin: 0">[확인 필요]</dd></div>
+</dl>
+</div>
+</div>
+<div style="border-top: 1px solid #5C6B78; padding-top: 24px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; color: #E5D3B8">
+<nav id="privacy" aria-label="정책" style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<a href="#privacy" style="color: #F8F4EC">개인정보처리방침</a>
+<a href="#privacy" style="color: #F8F4EC">이용약관</a>
+<a href="#privacy" style="color: #F8F4EC">환불 규정</a>
+</nav>
+<p style="margin: 0">상호 [확인 필요] · 대표자 [확인 필요] · 사업자등록번호 [확인 필요] · 통신판매업 신고번호 [확인 필요] · 주소 [확인 필요]</p>
+<p style="margin: 0">© 2026 AI라이프 메이커 김부장. 모든 권리 보유.</p>
+</div>
+</div>
+</footer>
+
+<div class="mbar" style="position: sticky; bottom: 0; z-index: 5; background: #2E3A46; border-top: 1px solid #5C6B78; padding: 12px 16px">
+<a href="#apply" style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 56px; background: #9E573F; color: #FFFFFF; text-decoration: none; font-size: 19px; font-weight: 600">수강 신청하기</a>
+</div>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById('apply-form');
+  var done = document.getElementById('apply-done');
+  var btn = document.getElementById('f-submit');
+  var sending = false;
+  function show(id, msg) {
+    var el = document.getElementById(id);
+    if (msg) el.textContent = msg;
+    el.hidden = false;
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (sending) return;
+    var f = form.elements;
+    var v = function (k) { return (f[k].value || '').trim(); };
+    ['e-name', 'e-phone', 'e-email', 'e-topic', 'e-agree'].forEach(function (id) { document.getElementById(id).hidden = true; });
+    ['name', 'phone', 'email', 'topic'].forEach(function (k) { f[k].removeAttribute('aria-invalid'); });
+    var bad = [];
+    if (!v('name')) { show('e-name'); bad.push('name'); }
+    var phone = v('phone').replace(/[^0-9]/g, '');
+    if (!v('phone')) { show('e-phone', '필수 항목을 입력해 주세요.'); bad.push('phone'); }
+    else if (!/^01[0-9]{8,9}$/.test(phone)) { show('e-phone', '연락처 형식을 확인해 주세요.'); bad.push('phone'); }
+    if (!v('email')) { show('e-email', '필수 항목을 입력해 주세요.'); bad.push('email'); }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) { show('e-email', '이메일 형식을 확인해 주세요.'); bad.push('email'); }
+    if (!v('topic')) { show('e-topic'); bad.push('topic'); }
+    if (!f.agree.checked) { show('e-agree'); bad.push('agree'); }
+    if (bad.length) {
+      bad.forEach(function (k) { f[k].setAttribute('aria-invalid', 'true'); });
+      f[bad[0]].focus();
+      return;
+    }
+    var finish = function () {
+      form.hidden = true;
+      done.hidden = false;
+      done.focus();
+    };
+    if (v('website')) { finish(); return; }
+    sending = true;
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+    btn.textContent = '보내는 중입니다…';
+    // [확인 필요] 신청 데이터 저장 위치(구글 시트·Supabase 등)가 정해지면 이곳에서 전송합니다.
+    setTimeout(finish, 900);
+  });
+})();
+</script>
+</body>
+</html>
